@@ -31,7 +31,6 @@ public class CheckboxSample extends Application {
     @Override
     public void start(Stage stage) {
         Scene scene = new Scene(new Group());
-        scene.getStylesheets().add("es/ieslosmontecillos/checkboxcss/checkbox.css");
         stage.setTitle("Checkbox Sample");
         stage.setWidth(250);
         stage.setHeight(150);
@@ -75,6 +74,7 @@ public class CheckboxSample extends Application {
         ((Group) scene.getRoot()).getChildren().add(root);
 
         stage.setScene(scene);
+        stage.getScene().getStylesheets().add(getClass().getResource("checkbox.css").toExternalForm());
         stage.show();
     }
 }
